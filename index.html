@@ -29,6 +29,9 @@
     }
 
     function createContainer(data) {
+        if (Object.keys(data).length === 0) {
+            return;
+        }
         let ul = document.createElement('ul');
         for (let key in data) {
             let li = document.createElement('li');
